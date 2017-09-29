@@ -1,0 +1,81 @@
+
+
+
+
+.filtro-Box-1 , .filtro-Box-2, .filtro-Box-3, .filtro-Box-4 , .filtro-Box-5, .filtro-Box-6
+{
+
+	width: 300px;
+	height: 40px;
+	position: fixed;
+	right: -420px;
+   	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+	overflow: hidden;
+}
+.filtro-Box-1
+{
+	top: 300px;
+	background: #89a;
+}
+.filtro-Box-2
+{
+	top: 350px;
+	
+	background: #9ab;
+}
+
+.filtro-Box-3
+{
+	top: 400px;
+	
+	background: #abc;
+}
+.filtro-Box-4
+{
+	top: 450px;
+	
+	background: #bcd;
+}
+.filtro-Box-5
+{
+	top: 500px;
+	
+	background: #cde;
+}
+
+.filtro-Box-6
+{
+	top: 550px;
+	
+	background: #def;
+}
+
+.filtro-Box-1:hover, .filtro-Box-2:hover ,.filtro-Box-3:hover, .filtro-Box-4:hover ,.filtro-Box-5:hover, .filtro-Box-6:hover
+
+{
+   opacity: 0.8;
+   height: auto;
+   right: 0px;
+   top: 300px;
+
+   	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+}
+
+
+
+
+
+datos personales
+aspecto fisico
+background
+estilo vida
+intereses gustos
+hobbies

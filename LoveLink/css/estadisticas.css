@@ -1,0 +1,209 @@
+body
+{
+	color:#666;
+	font-family: Arial;
+	background-image: url('../imagenes/fondoEstadisticas.jpg');
+	background-color: #fff;
+}
+.maxMenus
+{
+	width: 706px;
+	height: 80;
+	margin: auto;
+	font-family: Arial;
+	padding: 20px;
+}
+header>a
+{
+	position: fixed;
+	color: #FFF;
+	text-decoration: none;
+	top: 0;
+	right: 0;
+}
+.ventanas
+{
+	width: 1000px;
+	height: 500px;
+	margin: 80px auto;
+	font-family: Arial;
+	background-color: rgba(200,200,200,0);
+}
+.ventanaRangos
+{
+	margin: 5px;
+	color: black;
+}
+.ventanaActividad
+{
+	display: none;
+}
+.ventanaWinks
+{
+	display: none;
+}
+.ventanaMeBuscan
+{
+	display: none;
+}
+img.icon
+{
+	display: block;
+	width: 50px;
+	height: 45px;
+	margin: 7px auto;
+	background-color: rgba(255,255,255,0.15);
+	-webkit-border-radius: 50%;
+	-webkit-transition: background-color 0.4s;
+	-moz-border-radius: 50%;
+	-moz-transition: background-color 0.4s;
+}
+a:link
+{
+	text-decoration: none;
+}
+.menus
+{
+	width: 140px;
+	height: 80px;
+	border-top: solid 2px rgb(100,0,255);
+	border-bottom: solid 2px rgb(100,0,255);
+	float: left;
+	-webkit-transition: height 0.4s;
+	-moz-transition: height 0.4s;
+}
+#uno
+{
+	background-color: rgb(288,190,3);
+	border-left: solid 2px rgb(100,0,255);
+}
+#dos
+{
+	background-color: rgb(233,147,26);
+}
+#tres
+{
+	background-color: rgb(22,145,190);
+}
+#cuatro
+{
+	background-color: rgb(22,187,162);
+}
+#cinco
+{
+	background-color: rgb(100,187,255);
+	border-right: solid 2px rgb(100,0,255);
+}
+.texto
+{
+	font-size: 0.8em;
+	color: white;
+	text-align: center;
+	opacity: 0.6;
+	-webkit-transition: padding-top 0.4s;
+	-moz-transition: padding-top 0.4s;
+}
+.menus:hover
+{
+	height: 93px;
+}
+.menus:hover p.texto
+{
+	padding-top: 5px;
+}
+.menus:hover img.icon
+{
+	background-color: rgba(255,255,255,0.5);
+}
+table
+{
+	float: left;
+	margin: 10px;
+	width: 400px;
+}
+table,td
+{
+	background-color: white;
+	border: solid 1px rgb(0,0,0);
+}
+
+
+ul, ol
+{
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+.nav li a
+{
+	width: 120px;
+	background-color: white;
+	color: black;
+	text-decoration: none;
+	padding: 5px 10px;
+	margin: 0px 5px;
+	border: solid 1px rgb(0,0,0);
+	display: block;
+}
+.nav > li
+{
+	float: left;
+}
+.nav li a:hover
+{
+	background-color: rgba(0,255,0,0.5);	
+}
+.nav li ul
+{
+	display: none;
+	position: absolute;
+	min-width: 140px;
+}
+.nav li:hover > ul
+{
+	display: block;
+}
+.nav li ul li
+{
+	position: relative;
+}
+.nav li ul li ul
+{
+	right: -140px;
+	top: 0px;
+}
+#Ejercicio
+{
+	position:absolute;
+    top:150px;
+    left:200px;
+}
+#Cantidad1
+{
+	position:absolute;
+    top:150px;
+    left:350px;
+}
+#Hobbie
+{
+	position:absolute;
+    top:150px;
+    left:800px;
+}
+#Cantidad2
+{
+	position:absolute;
+    top:150px;
+    left:950px;
+}
+li a
+{
+	width: 120px;
+	background-color: white;
+	color: black;
+	text-decoration: none;
+	padding: 5px 10px;
+	margin: 0px 5px;
+	border: solid 1px rgb(0,0,0);
+	display: block;
+}

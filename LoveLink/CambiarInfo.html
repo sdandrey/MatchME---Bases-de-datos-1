@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset = "utf-8"/>
+    <meta description ="Love Ink una pagina web que no robara tu informacion para conquistar el mundo">
+
+    <link  rel="stylesheet" type="text/css" href="css/CambiarInfo.css"/>
+    <link  rel="stylesheet" type="text/css" href="fonts/css/font-awesome.min.css"/>
+    <link  rel="stylesheet" type="text/css" href="css/sliderResponsive.css"/>
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script language="javascript" type="text/javascript" src="js/responsive-slider.js"></script>
+    <script type="text/javascript">
+      var lugares=new Array();
+      var cantPaises=0;
+      var cantExerFrec=0;
+      var cantOCU=0;
+      var cantPIEL=0;
+      var cantOJOS=0;
+      var cantPELO=0;
+      var cantCONTEX=0;
+      var cantEDU=0;
+      var cantEST=0;
+      var cantBEB=0;
+      var cantREL=0;
+      var cantSAL=0;
+      function reiniciaArray(){
+        lugares=new Array();
+        cantPaises=0;
+        cantExerFrec=0;
+        cantOCU=0;
+        cantPIEL=0;
+        cantOJOS=0;
+        cantPELO=0;
+        cantCONTEX=0;
+        cantEDU=0;
+        cantEST=0;
+        cantBEB=0;
+        cantREL=0;
+        cantSAL=0;
+      }
+      function anadirExerFrec(nnew){
+        var select = document.getElementById("ejercicio");
+        var option = document.createElement("option");
+        option.text = nnew;
+        option.value = nnew;
+        select.add(option);
+        cantExerFrec++;
+      }
+      function anadirOCU(nnew){
+        var select = document.getElementById("ocupacion");
+        var option = document.createElement("option");
+        option.text = nnew;
+        option.value = nnew;
+        select.add(option);
+        cantOCU++;
+      }
+      function anadirPIEL(nnew){
+        var select = document.getElementById("piel");
+        var option = document.createElement("option");
+        option.text = nnew;
+        option.value = nnew;
+        select.add(option);
+        cantPIEL++;
+      }
+      function anadirOJOS(nnew){
+        var select = document.getElementById("ojos");
+        var option = document.createElement("option");
+        option.text = nnew;
+        option.value = nnew;
+        select.add(option);
+        cantOJOS++;
+      }
+      function anadirPELO(nnew){
+        var select = document.getElementById("pelo");
+        var option = document.createElement("option");
+        option.text = nnew;
+        option.value = nnew;
+        select.add(option);
+        cantPELO++;
+      }
+      function anadirCONTEX(nnew){
+        var select = document.getElementById("contextura");
+        var option = document.createElement("option");
+        option.text = nnew;
+        option.value = nnew;
+        select.add(option);
+        cantCONTEX++;
+      }
+      function anadirEDU(nnew){
+        var select = document.getElementById("educacion");
+        var option = document.createElement("option");
+        option.text = nnew;
+        option.value = nnew;
+        select.add(option);
+        cantEDU++;
+      }
+      function anadirEST(nnew){
+        var select = document.getElementById("estado");
+        var option = document.createElement("option");
+        option.text = nnew;
+        option.value = nnew;
+        select.add(option);
+        cantEST++;
+      }
+      function anadirBEB(nnew){
+        var select = document.getElementById("bebedor");
+        var option = document.createElement("option");
+        option.text = nnew;
+        option.value = nnew;
+        select.add(option);
+        cantBEB++;
+      }
+      function anadirREL(nnew){
+        var select = document.getElementById("religion");
+        var option = document.createElement("option");
+        option.text = nnew;
+        option.value = nnew;
+        select.add(option);
+        cantREL++;
+      }
+      function anadirSAL(nnew){
+        var select = document.getElementById("salario");
+        var option = document.createElement("option");
+        option.text = nnew;
+        option.value = nnew;
+        select.add(option);
+        cantSAL++;
+      }
+      function nuevoLugar(pos){
+        lugares[pos]=new Array();
+      }
+      function anadirPais(pos1,pos2,lugar){
+        lugares[pos1][pos2]=lugar;
+        lugares[pos1][1]=0;
+        var select = document.getElementById("paises");
+        var option = document.createElement("option");
+        option.text = lugar;
+        option.value = lugar;
+        select.add(option);
+        cantPaises=cantPaises+1;
+      }
+      function putCheckBox(uno,dos,tres,cuatro,tipo){
+        var tabla=document.getElementById("tablaIdiomas");
+        if(tipo == "deporte"){
+          tabla=document.getElementById("tablaDeportes");
+        }else if(tipo == "hobbie"){
+          tabla=document.getElementById("tablaHobbies");
+        }
+        var tr=document.createElement("tr");
+        var td1=document.createElement("td");
+        var td2=document.createElement("td");
+        var td3=document.createElement("td");
+        var td4=document.createElement("td");
+
+        var input1=document.createElement("input");
+        var p1=document.createElement("p");
+        var texto=document.createTextNode(uno);
+        p1.appendChild(texto);
+        input1.setAttribute("type","checkbox");
+        input1.setAttribute("name","check_"+tipo+"[]");
+        input1.setAttribute("value",uno);
+        p1.appendChild(input1);
+        td1.appendChild(p1);
+        tr.appendChild(td1);
+        if(dos != "none"){
+          var input2=document.createElement("input");
+          var p2=document.createElement("p");
+          var texto2=document.createTextNode(dos);
+          p2.appendChild(texto2);
+          input2.setAttribute("type","checkbox");
+          input2.setAttribute("name","check_"+tipo+"[]");
+          input2.setAttribute("value",dos);
+          p2.appendChild(input2);
+          td2.appendChild(p2);
+          tr.appendChild(td2);
+        }
+        if(tres != "none"){
+          var input3=document.createElement("input");
+          var p3=document.createElement("p");
+          var texto3=document.createTextNode(tres);
+          p3.appendChild(texto3);
+          input3.setAttribute("type","checkbox");
+          input3.setAttribute("name","check_"+tipo+"[]");
+          input3.setAttribute("value",tres);
+          p3.appendChild(input3);
+          td3.appendChild(p3);
+          tr.appendChild(td3);
+        }
+        if(cuatro != "none"){
+          var input4=document.createElement("input");
+          var p4=document.createElement("p");
+          var texto4=document.createTextNode(cuatro);
+          p4.appendChild(texto4);
+          input4.setAttribute("type","checkbox");
+          input4.setAttribute("name","check_"+tipo+"[]");
+          input4.setAttribute("value",cuatro);
+          p4.appendChild(input4);
+          td4.appendChild(p4);
+          tr.appendChild(td4);
+        }
+        tabla.appendChild(tr);
+      }
+      function anadirLugar(pos1,pos2,lugar){
+        var newpos=parseInt(pos2)+1;
+        lugares[pos1][newpos]=lugar;
+        lugares[pos1][1]=lugares[pos1][1]+1;
+      }
+      function elegirPais(){
+        var select = document.getElementById("ciudades");
+        var pais = document.getElementById("paises");
+        var seleccion = pais.options[pais.selectedIndex].value;
+        while(select.selectedIndex != -1){
+          select.remove(select.selectedIndex);
+        }
+        for(i=0;i<cantPaises;i++){
+          if(lugares[i][0] == seleccion){
+            var select2 = document.getElementById("ciudades");
+            for(k=0;k<lugares[i][1];k++){
+              var option = document.createElement("option");
+              option.text = lugares[i][k+2];
+              option.value = lugares[i][k+2];
+              select2.add(option);
+            }
+            i=lugares.lenght;
+          }
+        }
+      }
+      function selectCheckBox(tipo,nombre){
+        var checkboxes = document.getElementsByName("check_"+tipo+"[]");
+        for (var i=0; i<checkboxes.length; i++) {
+           if (checkboxes[i].value == nombre) {
+              checkboxes[i].checked = true;
+              i=checkboxes.length;
+           }
+        }
+      }
+      function colocarInfoInicial(nnombre,napellido,nfecha,nsigno,nedad,ngenero,nfrase,nfumador,nbebedor,nejercicio,ncantHijos,nquiereHijos,nocupacion,nsalario,ngustaMascotas,ntieneMascotas, naltura,npiel,nojos,npelo,npeso,ncontextura,neducacion,nestado,nreligion,nmarried){
+        document.getElementById('nombre').value=nnombre;
+        document.getElementById('apellido').value=napellido;
+        document.getElementById('frase').value=nfrase;
+        if(nfumador == "s"){
+          document.getElementById('fumador').checked=true;
+        }else{
+          document.getElementById('fumador').checked=false;
+        }
+        if(ngustaMascotas == "s"){
+          document.getElementById('gustaMascotas').checked=true;
+        }else{
+          document.getElementById('gustaMascotas').checked=false;
+        }
+        if(ntieneMascotas == "s"){
+          document.getElementById('tieneMascotas').checked=true;
+        }else{
+          document.getElementById('tieneMascotas').checked=false;
+        }
+        if(nquiereHijos == "s"){
+          document.getElementById('quiereHijos').checked=true;
+        }else{
+          document.getElementById('quiereHijos').checked=false;
+        }
+        if(nmarried == "s"){
+          document.getElementById('married').checked=true;
+        }else{
+          document.getElementById('married').checked=false;
+        }
+        var ejercicio=document.getElementById('ejercicio');
+        for(i=0;i<cantExerFrec;i++){
+          if(ejercicio.options[i].value == nejercicio){
+            ejercicio.selectedIndex = i.toString();
+            i=cantExerFrec;
+          }
+        }
+        var ocupacion=document.getElementById('ocupacion');
+        for(i=0;i<cantOCU;i++){
+          if(ocupacion.options[i].value == nocupacion){
+            ocupacion.selectedIndex = i.toString();
+            i=cantOCU;
+          }
+        }
+        var piel=document.getElementById('piel');
+        for(i=0;i<cantOCU;i++){
+          if(piel.options[i].value == npiel){
+            piel.selectedIndex = i.toString();
+            i=cantPIEL;
+          }
+        }
+        var ojos=document.getElementById('ojos');
+        for(i=0;i<cantOJOS;i++){
+          if(ojos.options[i].value == nojos){
+            ojos.selectedIndex = i.toString();
+            i=cantOJOS;
+          }
+        }
+        var pelo=document.getElementById('pelo');
+        for(i=0;i<cantPELO;i++){
+          if(pelo.options[i].value == npelo){
+            pelo.selectedIndex = i.toString();
+            i=cantPELO;
+          }
+        }
+        var contextura=document.getElementById('contextura');
+        for(i=0;i<cantCONTEX;i++){
+          if(contextura.options[i].value == ncontextura){
+            contextura.selectedIndex = i.toString();
+            i=cantCONTEX;
+          }
+        }
+        var educacion=document.getElementById('educacion');
+        for(i=0;i<cantEDU;i++){
+          if(educacion.options[i].value == neducacion){
+            educacion.selectedIndex = i.toString();
+            i=cantEDU;
+          }
+        }
+        var estado=document.getElementById('estado');
+        for(i=0;i<cantEST;i++){
+          if(estado.options[i].value == nestado){
+            estado.selectedIndex = i.toString();
+            i=cantEST;
+          }
+        }
+        var bebedor=document.getElementById('bebedor');
+        for(i=0;i<cantBEB;i++){
+          if(bebedor.options[i].value == nbebedor){
+            bebedor.selectedIndex = i.toString();
+            i=cantBEB;
+          }
+        }
+        var religion=document.getElementById('religion');
+        for(i=0;i<cantREL;i++){
+          if(religion.options[i].value == nreligion){
+            religion.selectedIndex = i.toString();
+            i=cantREL;
+          }
+        }
+        var salario=document.getElementById('salario');
+        for(i=0;i<cantSAL;i++){
+          if(salario.options[i].value == nsalario){
+            salario.selectedIndex = i.toString();
+            i=cantSAL;
+          }
+        }
+        var genero=document.getElementById('genero');
+        for(i=0;i<2;i++){
+          if(genero.options[i].value == ngenero){
+            genero.selectedIndex = i.toString();
+            i=2;
+          }
+        }
+        document.getElementById('fecha').value=nfecha;
+        document.getElementById('fecha').text=nfecha;
+        document.getElementById('altura').value=naltura;
+        document.getElementById('peso').value=npeso;
+      }
+    </script>
+
+    <title>Love Ink Pagina de Besos y Citas</title>
+    <title>Perfil</title>
+  </head>
+  <body>
+<form action="guardarNewPerfil.php" enctype="multipart/form-data" method="POST">
+<div class="ContenedorPrincipal">
+    <div class="Navigate">
+        <ul>
+            <li><a href="#Neutro">Información Personal </a></li>
+            <li><a href="#PersonalInfo">Estilo Vida</a></li>
+            <li><a href="#EstiloVida">Aspecto Fisico</a></li>
+            <li><a href="#AspectoFisico">Idiomas</a></li>
+            <li><a href="#Idiomas">Deportes</a></li>
+            <li><a href="#Sports">Hobbies</a></li>
+            <li><input id='botonGuardar' type="submit" name="botonGuardar" value="Guardar"></li>
+        </ul>
+    </div>
+    <div class="Seccion">
+        <div id="Neutro" class="SectionTitle"></div>
+        <div class="SectionImgBox"></div>
+    </div>
+    <div class="Seccion">
+        <div id="PersonalInfo" class="SectionTitle">Informacion Personal</div>
+        <div class="SectionImgBox"></div>
+        <table>
+            <tr>
+                   <td>Nombre: <input name="nombre" id='nombre' placeholder="Nombre"></td>
+                   <td>Apellido: <input name="apellido" id='apellido' placeholder="Apellidos"></td>
+            </tr>
+            <tr>
+                   <td>Fecha: <input name="fecha" id='fecha' placeholder="DD/MM/AAAA"></td>
+                   <td>Pais: <select name="pais" id='paises' onchange="elegirPais()" name="pais"></select></td>
+                   
+            </tr>
+            <tr>
+                   <td>Frase: <input name="frase" id='frase' placeholder="Frase"></td>
+                   <td>Ciudad: <select name="ciudad" id='ciudades' name="ciudad"></select></td>
+            </tr>
+            <tr>
+                   <td>Género <select name="genero" id='genero'>
+                    <option value="m">Masculino</option>
+                    <option value="f">Femenino</option>
+                   </select></td>
+            </tr>
+            
+                  
+            
+        </table>
+    </div>
+    
+    <div class="Seccion">
+            <div id="EstiloVida" class="SectionTitle">Estilo Vida</div>
+            <div class="SectionImgBox"></div>    
+        <table>
+            </tr>
+            <tr>
+                <td><input name="gustaMascotas" id='gustaMascotas' type="checkbox" placeholder="Gusta Mascotas">Gusta Mascotas</td>                
+                <td><input name="tieneMascotas" id='tieneMascotas' type="checkbox" placeholder="Tiene Mascotas">Tiene Mascotas</td>
+            </tr>
+            <tr>
+                   <td><input name="fumador" id='fumador' type="checkbox" placeholder="Fumador">Fumador</td>
+                   <td>Bebedor: <select name="bebedor" id='bebedor'></select></td>
+            </tr>
+            <tr>
+                <td><input name="quiereHijos" id='quiereHijos' type="checkbox" placeholder="Quiere Hijos">Quiere Hijos</td>
+                <td><input name="married" id='married' type="checkbox">Casad@ por el sistema</td>
+            </tr>
+            <tr>
+                <td><p>Cantidad de Hijos</p></td>
+                   <td>
+                        <select name="cantHijos" id='cantHijos'>
+                          <option value="4">0</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="4">5</option>
+                          <option value="infinite">Indefinidos</option>
+                        </select>
+                   </td>                   
+            </tr>
+            <tr>
+                <td><p>Ocupación</p></td>
+                    <td>
+                        <select name="ocupacion" id='ocupacion'></select>
+                   </td>
+            </tr>
+
+            <tr>
+                    <td><p>Rango Salario</p></td>
+                    <td>
+                        <select name="salario" id='salario'></select>
+                   </td>                
+            </tr>
+            <tr>
+                    <td><p>Frecuencia Ejercicio</p></td>
+                    <td>
+                        <select name="ejercicio" id='ejercicio'></select>
+                   </td>
+            </tr>
+        </table>
+    </div> 
+    <div class="Seccion">
+            <div id="AspectoFisico" class="SectionTitle">Aspecto Fisico</div>
+            <div class="SectionImgBox"></div>
+            <table><caption>Aspecto Fisico</caption>
+            <tr>
+                    <td>Altura: <input name="altura" id='altura' placeholder="Altura"></td>
+                    <td>Peso: <input name="peso" id='peso' placeholder="Peso"></td>
+                    <td><p>Contextura </p></td>
+                    <td>
+                        <select name="contextura" id='contextura'></select>
+                   </td>  
+            </tr>
+>
+            <tr>
+                    <td><p>Color Ojos </p></td>
+                    <td>
+                        <select name="ojos" id='ojos'></select>
+                   </td> 
+                  <td><p>Color Pelo </p></td>
+                    <td>
+                        <select name="pelo" id='pelo'></select>
+                   </td>
+
+            </tr>
+            </table>
+        </div>
+        
+    <div class="Seccion">
+            <div id="Idiomas" class="SectionTitle">Idiomas</div>
+            <div class="SectionImgBox"></div>
+            <table id='tablaIdiomas'></table>
+    </div>        
+
+    <div class="Seccion">
+            <div id="Sports" class="SectionTitle">Deportes</div>
+            <div class="SectionImgBox"></div>
+            <table id='tablaDeportes'></table>
+    </div>        
+
+    <div class="Seccion">
+            <div id="Hobbies" class="SectionTitle">Hobbies</div>
+            <div class="SectionImgBox"></div>
+            <table id='tablaHobbies'></table>
+    </div>  
+</div>
+</form>
+</body>
+</html>

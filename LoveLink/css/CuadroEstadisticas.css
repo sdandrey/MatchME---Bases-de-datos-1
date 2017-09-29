@@ -1,0 +1,78 @@
+
+.img-Redonda {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+@keyframes pushIn {
+  0% {
+    filter: blur(32px);
+    opacity: 0;
+    transform: scaleY(1) scaleX(1) translateY(50vh);
+    transform-origin: top center;
+  }
+  
+  25% {
+    opacity: 0;
+  }
+  
+  50% {
+    transform: scaleY(4) scaleX(.4) translateY(50vh);
+  }
+  
+  100% {
+    opacity: 1;
+    transform: scaleY(1) scaleX(1) translateY(0);
+    filter: blur(0);
+  }
+}
+
+.CuadroUsuario
+{
+  margin: 0px auto;
+  padding: 0px;
+  width: 500px;
+  height: 130px;
+  background:  rgba(57,116,116,0.7);
+  color: #aabbcc;
+  border-radius: 0  40px 0 40px  ;
+  
+}
+.CuadroImagen
+{
+  position: relative;
+
+  left: -50px;
+  width: 100px;
+  float: left;
+}
+
+.CuadroGenInfo
+{
+  text-align: left;
+  background:  rgba(57,116,126,0.7);
+  height: 50px;
+  border-radius: 0  40px 0 40px  ;
+}
+.NameText
+{
+
+  font-size: 1.5em;
+  font-style: italic;
+}
+.NameDir
+{
+  position: relative;
+  top: -20px;
+  font-size: 0.8em;
+
+}
+.NFrase
+{
+    position: relative;
+  top: -10px;
+    font-size: 1em;
+    overflow:auto;
+    height: 60px;
+    font-style: italic;
+}

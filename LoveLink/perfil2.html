@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset='utf-8'>
+		<link rel="stylesheet" href="Perfil/stylesheetPerfil.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript" src="Perfil/scriptPerfil.js"></script>
+		<script type="text/javascript">
+			function modImg(imagen,nombre){
+				document.getElementById(nombre).src=imagen;
+			}
+			function cambiarBoton(texto,id){
+				var boton=document.getElementById("modificar");
+				var textoAgregar = document.createTextNode(texto);
+				boton.appendChild(textoAgregar);
+				document.getElementById("linkBoton").setAttribute("href","doWink.php?id="+id);
+			}
+			function putUL(valor,tipo){
+				var ul=document.getElementById(tipo);  //hoobies, deportes o idiomas
+		        var li=document.createElement("li");
+		        var a=document.createElement("a");
+		        var texto=document.createTextNode(valor);
+		        a.setAttribute("href","#");
+		        a.appendChild(texto);
+		        li.appendChild(a);
+		        ul.appendChild(li);
+		      }
+			function modificarInfo(nnombre,napellido,nfecha,nsigno,nedad,ngenero,npais,nciudad,nfrase,nfumador,nbebedor,nejercicio,ncantHijos,nquiereHijos,nocupacion,nsalario,ngustaMascotas,ntieneMascotas, naltura,npiel,nojos,npelo,npeso,ncontextura,neducacion,nestado,nreligion,nmarried){
+				var nombre=document.getElementById('nombre').value;
+				var apellido=document.getElementById('apellido').value;
+				var edad=document.getElementById('edad').value;
+				var pais=document.getElementById('pais').value;
+				var ciudad=document.getElementById('ciudad').value;
+				var frase=document.getElementById('frase').value;
+				var fumador=document.getElementById('fumador').value;
+				var bebedor=document.getElementById('bebedor').value;
+				var ejercicio=document.getElementById('ejercicio').value;
+				var cantHijos=document.getElementById('cantHijos').value;
+				var quiereHijos=document.getElementById('quiereHijos').value;
+				var ocupacion=document.getElementById('ocupacion').value;
+				var salario=document.getElementById('salario').value;
+				var signo=document.getElementById('signo').value;
+				var gustaMascotas=document.getElementById('gustaMascotas').value;
+				var tieneMascotas=document.getElementById('tieneMascotas').value;
+				var fecha=document.getElementById('fecha').value;
+				var altura = document.getElementById('altura').value;
+				var Piel = document.getElementById('piel').value;
+				var ojos = document.getElementById('ojos').value;
+				var pelo = document.getElementById('pelo').value;
+				var peso = document.getElementById('peso').value;
+				var contextura = document.getElementById('contextura').value;
+				var educacion = document.getElementById('educacion').value;
+				var estado = document.getElementById('estado').value;
+				var religion = document.getElementById('religion').value;
+				var married = document.getElementById('married').value;
+
+				nombre = "Nombre: " + nnombre;
+				apellido = "Apellido: " + napellido;
+				pais = "Pais: " + npais;
+				ciudad = "Ciudad: " + nciudad;
+				frase = "Frase: " + nfrase;
+				fumador = "Fumador: " + nfumador;
+				bebedor = "Bebedor: " + nbebedor;
+				ejercicio = "Ejercicio: " + nejercicio;
+				cantHijos = "Cantidad de Hijos: " + ncantHijos;
+				quiereHijos = "Desea tener hijos: " + nquiereHijos;
+				ocupacion = "Ocupación: " + nocupacion;
+				salario = "Rango de salario: " + nsalario;
+				edad = "Edad: "+nedad+" años";
+				signo = "Signo zodiacal: " + nsigno;
+				gustaMascotas = "Le gustan las mascotas: " + ngustaMascotas;
+				tieneMascotas = "Tiene mascotas: " + ntieneMascotas;
+				fecha = "Fecha: " + nfecha;
+				altura = "Altura: " + naltura;
+				Piel = "Piel: " + npiel;
+				ojos = "ojos: " + nojos;
+				pelo = "Pelo: " + npelo;
+				peso = "Peso: " + npeso;
+				contextura = "Contextura: " + ncontextura;
+				educacion = "Educación: " + neducacion;
+				estado = "Estado: " + nestado;
+				religion = "Religión: " + nreligion;
+				married="Casad@: " + nmarried;
+				document.getElementById('nombre').innerHTML = nombre;
+				document.getElementById('apellido').innerHTML = apellido;
+				document.getElementById('edad').innerHTML = edad;
+				document.getElementById('pais').innerHTML = pais;
+				document.getElementById('ciudad').innerHTML = ciudad;
+				document.getElementById('frase').innerHTML = frase;
+				document.getElementById('fumador').innerHTML = fumador;
+				document.getElementById('bebedor').innerHTML = bebedor;
+				document.getElementById('ejercicio').innerHTML = ejercicio;
+				document.getElementById('cantHijos').innerHTML = cantHijos;
+				document.getElementById('quiereHijos').innerHTML = quiereHijos;
+				document.getElementById('ocupacion').innerHTML = ocupacion;
+				document.getElementById('salario').innerHTML = salario;
+				document.getElementById('signo').innerHTML = signo;
+				document.getElementById('gustaMascotas').innerHTML = gustaMascotas;
+				document.getElementById('tieneMascotas').innerHTML = tieneMascotas;
+				document.getElementById('fecha').innerHTML = fecha;
+				document.getElementById('altura').innerHTML = altura;
+				document.getElementById('piel').innerHTML = Piel;
+				document.getElementById('ojos').innerHTML = ojos;
+				document.getElementById('pelo').innerHTML = pelo;
+				document.getElementById('peso').innerHTML = peso;
+				document.getElementById('contextura').innerHTML = contextura;
+				document.getElementById('educacion').innerHTML = educacion;
+				document.getElementById('estado').innerHTML = estado;
+				document.getElementById('religion').innerHTML = religion;
+				document.getElementById('married').innerHTML = married;
+			}
+		</script>
+	</head>
+		<body>
+			<div id='contenido'>
+				<header>
+					<a href="cerrarSesion.php" id='cerrarSesion'><b>Cerrar Sesión</b></a>
+					<hgroup>
+						<h1>Perfil</h1>
+					</hgroup>
+				</header>
+				<section>
+					<div id='textoPr'>
+						<div class="slider">
+							<img id='img1' class="imagenDesc s_element s_visible" src="Perfil/default.png"/>
+							<img id='img2' class="imagenDesc s_element" src="Perfil/default.png"/>
+							<img id='img3' class="imagenDesc s_element" src="Perfil/default.png"/>
+							<img id='img4' class="imagenDesc s_element" src="Perfil/default.png"/>
+							<img id='img5' class="imagenDesc s_element" src="Perfil/default.png"/>
+						</div>
+
+						<article class="textoHorizontalDesc">
+							<hgroup>
+								<h1>Descripción</h1>
+							</hgroup>
+							<p><eti id="nombre">Nombre: Cerebro.</eti><br/><eti id="apellido">Apellido: Ratón</eti><br/><eti id="edad">Edad: 7 años</eti><br/><eti id="genero">Género: Masculino</eti><br/><eti id="pais">País: Francia</eti>  <eti id="ciudad">Ciudad:Paris</eti><br><eti id='married'>Casad@: Si</eti><br><eti id="frase">Frase: Vamos a conquistar el mundo!!!</eti></p><p>
+								---------------------------------------------------------------<br>---------------------------------------------------------------<br>---------------------------------------------------------------<br>
+							</p></p>
+							<ul class="nav">
+								<li id='depo'><a href="">Deportes</a>
+									<ul id='deportes'></ul>
+								</li>
+								<li id='hobbi'><a href="">Hobbies</a>
+									<ul id='hobbies'></ul>
+								</li>
+							</ul>
+						</article>
+						<article class="textoHorizontalDesc">
+							<hgroup>
+								<h1>Información Extra</h1>
+							</hgroup>
+							<p><eti id="fumador">Fumador: No</eti><br><eti id="bebedor">Bebedor: No</eti><br><eti id="ejercicio">Ejercicio: Todos los días</eti><br><eti id="cantHijos">Cantidad de hijos: 0</eti><br><eti id="quiereHijos">Desea tener Hijos: No</eti><br><eti id="ocupacion">Ocupación: Científico</eti><br><eti id="salario">Rango de salario: 0$</eti><br><eti id="signo">Signo sodiacal: Capricornio</eti><br><eti id="gustaMascotas">Le gustan las mascotas: No</eti><br><eti id="tieneMascotas">Tiene mascotas: No</eti><br><eti id="fecha">Fecha Nacimiento: 16/12/2007</eti></p>
+							<ul class="nav">
+								<li id='fisico'><a href="">Aspecto físico</a>
+									<ul>
+										<li><a href=""><eti id="altura">Altura: 30cm</eti></a></li>
+										<li><a href=""><eti id="piel">Piel: Rosado</eti></a></li>
+										<li><a href=""><eti id="ojos">Ojos: Rojos</eti></a></li>
+										<li><a href=""><eti id="pelo">Pelo: Blanco</eti></a></li>
+										<li><a href=""><eti id="peso">Peso: 2kg</eti></a></li>
+										<li><a href=""><eti id="contextura">Contextura: Normal</eti></a></li>
+									</ul>
+								</li>
+								<li id='background'><a href="">Background</a>
+									<ul>
+										<li><a href="#"><eti id="educacion">Educación: Universitaria</eti></a></li>
+										<li><a href="#">Idiomas: </a>
+											<ul id='idiomas'></ul>
+										</li>
+										<li><a href=""><eti id="estado">Estado civil: Soltero</eti></a></li>
+										<li><a href=""><eti id="religion">Religión: Ateo</eti></a></li>
+									</ul>
+								</li>
+							</ul>
+						</article>
+						<button id="btn1"></button>
+						<button id="btn2"></button>
+						<button id="btn3"></button>
+						<button id="btn4"></button>
+						<button id="btn5"></button>
+						<a id='linkBoton'><button id='modificar'></button></a>
+						<a href="Busquedas.php"><button id='volver'>Volver</button></a>
+					</div>
+				</section>
+			</div>
+		</body>

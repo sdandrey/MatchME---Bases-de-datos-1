@@ -1,0 +1,131 @@
+.Result-Content
+{
+	
+	margin: 0 auto;
+	width: 70%;
+
+}
+.Carta-Usuario
+{
+	background:  rgba(157,216,216,0.2);
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+	margin: 5px;
+}
+
+.Img-Block
+{
+	display: inline-block;
+	position: relative;
+	height: 100px;
+	width: 100px;
+	
+}
+.Inf-Block
+{
+	background:  rgba(157,216,216,0.2);
+	color: rgb(0,178,178);
+	display: inline-block;
+	height: 100%;
+	width: 50%;
+}
+.Inf-Block p
+{
+	padding: 0px;
+	
+	margin-left: 10px;
+}
+.User-Name
+{
+	font-size: 1.4em;
+
+}
+	
+
+
+.Cmp-Block
+{
+	
+	background: #22aa77;
+	display: inline-block;
+	height: 100px;
+	width: 29%;
+	overflow: hidden;
+	
+}
+.More-Graphics
+{
+	background: #7ff899;
+	position: absolute;
+	width: 350px;
+	height: 100px;
+	right: -250px;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+
+}
+
+.img-Redonda {
+  border-radius: 50%;
+}
+.fotos
+{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+}
+header>a
+{
+	position: fixed;
+	color: #FFF;
+	text-decoration: none;
+	top: 0;
+	right: 0;
+}
+.imgPerfil
+{
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	margin-left: 10px;
+	margin-top: -15px;
+	border-radius: 10%;
+}
+.onHover:hover #imgPerfil
+{
+	margin-top: -25px;
+}
+@keyframes pushIn {
+  0% {
+    filter: blur(32px);
+    opacity: 0;
+    transform: scaleY(1) scaleX(1) translateY(50vh);
+    transform-origin: top center;
+  }
+  
+  25% {
+    opacity: 0;
+  }
+  
+  50% {
+    transform: scaleY(4) scaleX(.4) translateY(50vh);
+  }
+  
+  100% {
+    opacity: 1;
+    transform: scaleY(1) scaleX(1) translateY(0);
+    filter: blur(0);
+  }
+}
+.Wink-Button
+{
+	height: 2em;
+	width: 2em;
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+}

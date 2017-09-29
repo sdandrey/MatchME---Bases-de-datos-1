@@ -1,0 +1,76 @@
+*
+{
+	margin: 0px;
+	padding: 0px;
+}
+body
+{
+	
+	background-image: url('Mosaico.png');
+}
+h1{margin: 20px auto; text-align: center;}
+#cajaLogo
+{
+	margin-top: 30px;
+}
+#cajaLogo,#divContenedorTabla,#Navi
+{
+	background: rgba(200,200,200,0.3);
+	margin: 0px auto;
+	width: 70%;
+
+}
+#divContenedorTabla{padding: 20px;}
+#inputCatalogName,#botonBuscar,#lblBuscarCat
+{
+	display: inline-block;
+}
+#cajaLogo
+{
+	margin: 0px auto;
+	height: 150px;
+	width:70%;
+	background: rgba(200,200,200,0.3);
+}
+.imglogo
+{
+	height: auto;
+	width: 300px;
+}
+#Navi
+{
+	text-decoration: none;
+	list-style-type: none;
+	text-align: center;
+}
+#TablaDeCampos
+{
+	width: 100%;
+}
+#TablaDeCampos 
+{
+	border-bottom: 5px;
+	border-color: rgba(200,200,100,0.7);
+}
+#TablaDeCampos > caption
+{
+	font-size: 1.5em;
+	text-transform: uppercase;
+
+}
+
+.clsEliminarFila
+{
+	background: rgba(70,150,150,0.7);
+	height: 25px;
+	width: 25px;
+}
+.clsAnchoTotal
+{
+	width: 90%
+	
+}
+.clsAnchoTotal:hover
+{
+	background: #abc;
+}

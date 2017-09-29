@@ -1,0 +1,40 @@
+*
+{  
+	margin : 0;
+	padding: 0;
+}
+
+header
+{
+	background-image: url('../img/Mosaico.png');
+	background-attachment: fixed;
+	overflow: hidden;
+}
+.Img-Logo
+{
+	height: auto;
+	width: auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+
+#logo-index-block
+{
+	height: 230px;
+	width: auto;
+	max-width: 50%;
+	margin: 0 auto;
+
+}
+#login-index-block
+{
+	right: 0px;
+}
+
+
+h2
+{
+	color: white;
+}
+
